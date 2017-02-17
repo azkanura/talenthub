@@ -10,5 +10,8 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-csssplit": "^0.4.0",
     "grunt-devserver": "^0.6.0"
+  },
+  "dependencies": {
+    "handlebars": "^4.0.6"
   }
 }

@@ -1,0 +1,46 @@
+.stat{
+	display: none;
+}
+.thread-title{
+	line-height: 1.5em;
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+.thread-info,.stat-number{
+	color: #606060;
+}
+
+.thread-info a{
+	font-weight: bold;
+	color: #888;
+}
+
+.action-bar{
+	min-height: 70px;
+	padding:20px 40px;
+	background-color: #f6f6f6;
+}
+.action-form-bar{
+	padding: 5px 0;
+	min-height: 52px;
+}
+
+.back{
+	color: #fefefe;
+	margin-right: 20px;
+	font-size: 24px;
+}
+
+@media ( min-width : 768px ){
+	.stat{
+		display: inline-block;
+		margin-right: 20px;
+		width: 50px;
+	}
+
+	.form-label{
+		font-size: 16px;
+		min-width: 120px;
+	}
+}
