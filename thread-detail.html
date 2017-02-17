@@ -11,7 +11,11 @@
         <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
         <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
         <link href="vendors/bower_components/google-material-color/dist/palette.css" rel="stylesheet">
-            
+        
+        <link href="vendors/farbtastic/farbtastic.css" rel="stylesheet">
+        <link href="vendors/bower_components/chosen/chosen.min.css" rel="stylesheet">
+        <link href="vendors/summernote/dist/summernote.css" rel="stylesheet">
+
         <!-- CSS -->
         <link href="css/app.min.1.css" rel="stylesheet">
         <link href="css/app.min.2.css" rel="stylesheet">
@@ -454,101 +458,219 @@
                         <div class="action-bar">
                             <button class="btn btn-primary pull-right"><i class="zmdi zmdi-plus"></i> Buat Thread Baru</button>
                         </div>
-
-                        <div class="list-group lg-alt lg-even-black">
-                            
-                            <div class="list-group-item media thread">
-                                <div class="pull-left text-center">
-                                        <div class="pull-left vote">
-                                            <a class="icon-vote icon-vote-up"><i class="zmdi zmdi-lg zmdi-caret-up"></i></a>
-                                            <h3 class="vote-number">20</h2>
-                                            <a class="icon-vote icon-vote-down"><i class="zmdi zmdi-lg zmdi-caret-down"></i></a>
-                                        </div>
-                                </div>
-
-                                <div class="pull-right">
-                                    <ul class="actions">
-                                        <li class="dropdown">
-                                            <a href="" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="zmdi zmdi-more-vert"></i>
-                                            </a>
-
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li>
-                                                    <a href="">Refresh</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Listview Settings</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="pull-left">
-                                    <div class="avatar-char palette-Green-400 bg">P</div>
-                                </div>
-
-                                <div class="media-body">
-                                    <h4 class="lgi-heading thread-title">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</h4>
-                                    <p>Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies. ornare accumsan at vel magnauis blandit turpis at augue ultricies. t est ornare accumsan at vel magnauis blandit turpis at augue ultricies. augue ultricies. ornare accumsan at vel magnauis blandit turpis at augue ultricies. blandit turpis at augue ultricies.</p>
-                                    <div class="row">
-                                        <div class="col-md-7">
-                                            <ul class="lgi-attrs">
-                                                <li class="b-0 bgm-gray c-white">kuliah</li>
-                                                <li class="b-0 bgm-gray c-white">proses</li>
-                                                <li class="b-0 bgm-gray c-white">sukses</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-5 text-right">
-                                            <small class="thread-info">dimulai oleh: <a>Abdul Syakur</a> pada 2 Jan 2017</small>
-                                        </div>
-                                    </div>
+                        <div class="list-group-item media thread">
+                            <div class="pull-left text-center">
+                                <div class="pull-left vote">
+                                    <a class="icon-vote icon-vote-up"><i class="zmdi zmdi-lg zmdi-caret-up"></i></a>
+                                    <h3 class="vote-number">20</h3>
+                                    <a class="icon-vote icon-vote-down"><i class="zmdi zmdi-lg zmdi-caret-down"></i></a>
                                 </div>
                             </div>
-                            <div>
-                                <div class="col-md-12 comments">
-                                    <div class="col-md-2">
-                                        <h4>4 komentar</h4>
-                                    </div>
-                                    <div class="col-md-9">
-                                        <div class="media-demo">
-                                            <div class="media comment">
-                                                <div class="pull-right">
-                                                    <a href="#">
-                                                        <img class="media-object" src="img/profile-pics/1.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. 
-                                                </div>
-                                            </div>
-                                            <div class="media comment">
-                                                <div class="pull-right">
-                                                    <a href="#">
-                                                        <img class="media-object" src="img/profile-pics/2.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="media-body">
-                                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                                                </div>
-                                            </div>
-                                            <div class="media comment">
-                                                <div class="pull-right">
-                                                    <a href="#">
-                                                        <img class="media-object" src="img/profile-pics/6.jpg" alt="">
-                                                    </a>
-                                                </div>
 
-                                                <div class="media-body">
-                                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="pull-right">
+                                <ul class="actions">
+                                    <li class="dropdown">
+                                        <a href="" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="">Refresh</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Listview Settings</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- <div class="pull-left">
+                                <div class="avatar-char palette-Green-400 bg">P</div>
+                            </div> -->
+
+                            <div class="media-body">
+                                <h4 class="thread-title">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam Per an error perpetua ?</h4>
+                                <p>Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies. ornare accumsan at vel magnauis blandit turpis at augue ultricies. t est ornare accumsan at vel magnauis blandit turpis at augue ultricies. augue ultricies. ornare accumsan at vel magnauis blandit turpis at augue ultricies. blandit turpis at augue ultricies.</p>
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <ul class="lgi-attrs">
+                                            <li class="b-0 bgm-gray c-white">kuliah</li>
+                                            <li class="b-0 bgm-gray c-white">proses</li>
+                                            <li class="b-0 bgm-gray c-white">sukses</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-5 thread-info-container">
+                                        <small class="thread-info">dimulai oleh: <a>Abdul Syakur</a> pada 2 Jan 2017</small>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="row m-0">
+                            <div class="col-md-12 comments">
+                                <div class="col-md-2">
+                                    <h4>4 komentar</h4>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="ms-reply comment-post">
+                                        <textarea placeholder="Tuliskan komentar anda..." class="comment-textarea"></textarea>
+                                        <button><i class="zmdi zmdi-mail-send"></i></button>
+                                    </div>
+                                    <div class="media-demo">
+                                        <div class="media comment">
+                                            <div class="pull-right">
+                                                <a href="#">
+                                                    <img class="media-object img-circle img-sm" src="img/profile-pics/1.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. <small class="thread-info">- <a href="profile-about.html">Yuni Suriatno</a> pada 2 Jan 2017</small> 
+                                            </div>
+                                        </div>
+                                        <div class="media comment">
+                                            <div class="pull-right">
+                                                <a href="#">
+                                                    <img class="media-object img-circle img-sm" src="img/profile-pics/2.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. <small class="thread-info">- <a href="profile-about.html">Yuni Suriatno</a> pada 2 Jan 2017</small> 
+                                            </div>
+                                        </div>
+                                        <div class="media comment">
+                                            <div class="pull-right">
+                                                <a href="#">
+                                                    <img class="media-object img-circle img-sm" src="img/profile-pics/6.jpg" alt="">
+                                                </a>
+                                            </div>
+
+                                            <div class="media-body">
+                                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. <small class="thread-info">- <a href="profile-about.html">Yuni Suriatno</a> pada 2 Jan 2017</small> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <a class="show-more"><small>Tampilkan semua komentar <i class="zmdi zmdi-refresh"></i></small></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-0">
+                            <div class="col-md-12 reply-title">
+                                <div class="col-md-12">
+                                    <h4>2 jawaban <button class="btn btn-primary pull-right" id="createAnswerButton"><i class="zmdi zmdi-plus"></i> Buat Jawaban</button></h4>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row m-0" id="createAnswer">
+                        
+                            <div class="col-md-12 action-bar">
+                                <div class="html-editor m-b-25"></div>
+                                <button class="btn btn-success pull-right" id="saveAnswerButton">Buat Jawaban</button>
+                            </div>
+                        </div>
+
+                        <div class="list-group-item media thread">
+                            <div class="pull-left text-center">
+                                <div class="pull-left vote">
+                                    <a class="icon-vote icon-vote-up"><i class="zmdi zmdi-lg zmdi-caret-up"></i></a>
+                                    <h3 class="vote-number">120</h3>
+                                    <a class="icon-vote icon-vote-down"><i class="zmdi zmdi-lg zmdi-caret-down"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="pull-right">
+                                <ul class="actions">
+                                    <li class="dropdown">
+                                        <a href="" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="">Refresh</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Listview Settings</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- <div class="pull-left">
+                                <div class="avatar-char palette-Green-400 bg">P</div>
+                            </div> -->
+
+                            <div class="media-body">
+                                <p>Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies. ornare accumsan at vel magnauis blandit turpis at augue ultricies. t est ornare accumsan at vel magnauis blandit turpis at augue ultricies. augue ultricies. ornare accumsan at vel magnauis blandit turpis at augue ultricies. blandit turpis at augue ultricies. Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies. ornare accumsan at vel magnauis blandit turpis at augue ultricies. t est ornare accumsan at vel magnauis blandit turpis at augue ultricies. augue ultricies. ornare accumsan at vel magnauis blandit turpis at augue ultricies. blandit turpis at augue ultricies. Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies. ornare accumsan at vel magnauis blandit turpis at augue ultricies. t est ornare accumsan at vel magnauis blandit turpis at augue ultricies. augue ultricies. ornare accumsan at vel magnauis blandit turpis at augue ultricies. blandit turpis at augue ultricies.</p>
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <ul class="lgi-attrs">
+                                            <li class="b-0 bgm-gray c-white">kuliah</li>
+                                            <li class="b-0 bgm-gray c-white">proses</li>
+                                            <li class="b-0 bgm-gray c-white">sukses</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-5 thread-info-container">
+                                        <small class="thread-info">oleh: <a>Abdul Syakur</a> pada 2 Jan 2017</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-0">
+                            <div class="col-md-12 comments">
+                                <div class="col-md-2">
+                                    <h4>4 komentar</h4>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="ms-reply comment-post">
+                                        <textarea placeholder="Tuliskan komentar anda..." class="comment-textarea"></textarea>
+                                        <button><i class="zmdi zmdi-mail-send"></i></button>
+                                    </div>
+                                    <div class="media-demo">
+                                        <div class="media comment">
+                                            <div class="pull-right">
+                                                <a href="#">
+                                                    <img class="media-object img-circle img-sm" src="img/profile-pics/1.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. <small class="thread-info">- <a href="profile-about.html">Yuni Suriatno</a> pada 2 Jan 2017</small> 
+                                            </div>
+                                        </div>
+                                        <div class="media comment">
+                                            <div class="pull-right">
+                                                <a href="#">
+                                                    <img class="media-object img-circle img-sm" src="img/profile-pics/2.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. <small class="thread-info">- <a href="profile-about.html">Yuni Suriatno</a> pada 2 Jan 2017</small> 
+                                            </div>
+                                        </div>
+                                        <div class="media comment">
+                                            <div class="pull-right">
+                                                <a href="#">
+                                                    <img class="media-object img-circle img-sm" src="img/profile-pics/6.jpg" alt="">
+                                                </a>
+                                            </div>
+
+                                            <div class="media-body">
+                                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. <small class="thread-info">- <a href="profile-about.html">Yuni Suriatno</a> pada 2 Jan 2017</small> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <a class="show-more"><small>Tampilkan semua komentar <i class="zmdi zmdi-refresh"></i></small></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
 
                         <ul class="pagination lg-pagination">
                             <li>
@@ -603,31 +725,31 @@
                         <li>
                             <a href="http://www.google.com/chrome/">
                                 <img src="img/browsers/chrome.png" alt="">
-                                <div>Chrome</div>
+                                <div class="row m-0">Chrome</div>
                             </a>
                         </li>
                         <li>
                             <a href="https://www.mozilla.org/en-US/firefox/new/">
                                 <img src="img/browsers/firefox.png" alt="">
-                                <div>Firefox</div>
+                                <div class="row m-0">Firefox</div>
                             </a>
                         </li>
                         <li>
                             <a href="http://www.opera.com">
                                 <img src="img/browsers/opera.png" alt="">
-                                <div>Opera</div>
+                                <div class="row m-0">Opera</div>
                             </a>
                         </li>
                         <li>
                             <a href="https://www.apple.com/safari/">
                                 <img src="img/browsers/safari.png" alt="">
-                                <div>Safari</div>
+                                <div class="row m-0">Safari</div>
                             </a>
                         </li>
                         <li>
                             <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
                                 <img src="img/browsers/ie.png" alt="">
-                                <div>IE (New)</div>
+                                <div class="row m-0">IE (New)</div>
                             </a>
                         </li>
                     </ul>
@@ -644,6 +766,13 @@
         <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
         <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
 
+        <script src="vendors/bower_components/moment/min/moment.min.js"></script>
+        <script src="vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+        <script src="vendors/bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
+        <script src="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="vendors/bower_components/typeahead.js/dist/typeahead.bundle.min.js"></script>
+        <script src="vendors/summernote/dist/summernote-updated.min.js"></script>
+
         <!-- Placeholder for IE9 -->
         <!--[if IE 9 ]>
             <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
@@ -652,5 +781,21 @@
         <script src="js/functions.js"></script>
         <script src="js/actions.js"></script>
         <script src="js/demo.js"></script>
+
+        <script>
+            $(document).on('ready',function(){
+                $('#createAnswerButton').on('click',function(){
+                    $('#createAnswer').slideDown();
+                    $(this).prop('disabled',true);
+                });
+
+                $('#saveAnswerButton').on('click',function(){
+                    $('#createAnswer .html-editor').val('');
+                    $('#createAnswer').slideUp();
+                    $('#createAnswerButton').removeAttr('disabled');
+                });
+
+            });
+        </script>
     </body>
 </html>
