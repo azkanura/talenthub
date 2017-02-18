@@ -15,6 +15,7 @@
         <!-- CSS -->
         <link href="css/app.min.1.css" rel="stylesheet">
         <link href="css/app.min.2.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
 
     <body data-ma-header="teal">
@@ -445,117 +446,98 @@
             <section id="content">
                 <div class="container">
                     <div class="c-header">
-                        <h2>Listview</h2>
+                        <h2>Hasil Pencarian Untuk: <strong>Andi</strong></h2>
                     </div>
-
                     <div class="card">
-                        <div class="action-header palette-Teal-400 bg clearfix">
-                            <div class="ah-label hidden-xs palette-White text">Some text here</div>
-
-                            <div class="ah-search">
-                                <input type="text" placeholder="Start typing..." class="ahs-input">
-
-                                <i class="ah-search-close zmdi zmdi-long-arrow-left" data-ma-action="ah-search-close"></i>
+                        <ul class="tab-nav text-center">
+                            <li class="active"><a href="#tab2" data-toggle="tab">Semua</a></li>
+                            <li><a href="#tab3" data-toggle="tab">Alumni</a></li>
+                            <li><a href="#tab4" data-toggle="tab">Forum</a></li>
+                            <!-- <li><a href="#tab5" data-toggle="tab">Ilmiah</a></li>
+                            <li><a href="#tab6" data-toggle="tab">Santai</a></li> -->
+                        </ul>
+                        <div class="row m-0">
+                            <div class="col-md-12 search-title">
+                                <div class="col-md-12">
+                                    <h4>Alumni</h4>
+                                </div>
                             </div>
+                        </div>
 
-                            <ul class="ah-actions actions a-alt">
-                                <li>
-                                    <a href="" class="ah-search-trigger" data-ma-action="ah-search-open">
-                                        <i class="zmdi zmdi-search"></i>
-                                    </a>
-                                </li>
+                        <div class="list-group lg-alt lg-even-black">
+                            <div class="list-group-item">
+                                <div class="row m-0">
+                                    <!-- <div class="col-md-12"> -->
+                                        <div class="col-md-1 col-sm-2 col-xs-3">
+                                            <div class="pull-left">
+                                                <!-- <div class="avatar-char palette-Green-400 bg">P</div> -->
+                                                <a href="#">
+                                                    <img class="media-object img-circle" src="img/profile-pics/1.jpg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-5 col-xs-9">
+                                            <h4 class="alumni-name"><a href="thread-detail.html">Ahmad Budi Sunandi</a></h4>
+                                            <small class="">Web Developer di IndoDevelop | Jakarta, Indonesia</small>
+                                            <p class="alumni-detail alumni-education">Jurusan Ilmu Komputer Universitas Indonesia</p>
+                                            <p class="alumni-detail alumni-skill">Keahlian: PHP, MySQL, HTML, CSS, Public Speaking, Standup Comedy</p>
+                                        </div>
+                                        <div class="col-md-5 col-sm-5 col-xs-12 action-button-group">
+                                            <a class="btn btn-default pull-right action-btn"><i class="zmdi zmdi-email"></i> Kirim Pesan</a>
+                                            <a class="btn btn-primary pull-right action-btn m-r-10"><i class="zmdi zmdi-link"></i> Terhubung</a>
+                                        </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <div class="row m-0">
+                                    <!-- <div class="col-md-12"> -->
+                                        <div class="col-md-1 col-sm-2 col-xs-3">
+                                            <div class="pull-left">
+                                                <!-- <div class="avatar-char palette-Green-400 bg">P</div> -->
+                                                <a href="#">
+                                                    <img class="media-object img-circle" src="img/profile-pics/1.jpg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-5 col-xs-9">
+                                            <h4 class="alumni-name"><a href="thread-detail.html">Ahmad Budi Sunandi</a></h4>
+                                            <small class="">Web Developer di IndoDevelop | Jakarta, Indonesia</small>
+                                            <p class="alumni-detail alumni-education">Jurusan Ilmu Komputer Universitas Indonesia</p>
+                                            <p class="alumni-detail alumni-skill">Keahlian: PHP, MySQL, HTML, CSS, Public Speaking, Standup Comedy</p>
+                                        </div>
+                                        <div class="col-md-5 col-sm-5 col-xs-12 action-button-group">
+                                            <a class="btn btn-default pull-right action-btn"><i class="zmdi zmdi-email"></i> Kirim Pesan</a>
+                                            <a class="btn btn-primary pull-right action-btn m-r-10"><i class="zmdi zmdi-link"></i> Terhubung</a>
+                                        </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                        </div>
 
-                                <li>
-                                    <a href="">
-                                        <i class="zmdi zmdi-time"></i>
-                                    </a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="" data-toggle="dropdown" aria-expanded="true">
-                                        <i class="zmdi zmdi-sort"></i>
-                                    </a>
-
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li>
-                                            <a href="">Last Modified</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Last Edited</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Name</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Date</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <i class="zmdi zmdi-info"></i>
-                                    </a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="" data-toggle="dropdown" aria-expanded="true">
-                                        <i class="zmdi zmdi-more-vert"></i>
-                                    </a>
-
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li>
-                                            <a href="">Refresh</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Listview Settings</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <div class="row m-0">
+                            <div class="col-md-12 search-title">
+                                <div class="col-md-12">
+                                    <h4>Forum</h4>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="list-group lg-alt lg-even-black">
                             <div class="list-group-item media">
-                                <div class="checkbox pull-left lgi-checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        <i class="input-helper"></i>
-                                    </label>
-                                </div>
-
-                                <div class="pull-left">
-                                    <div class="avatar-char palette-Light-Blue bg">P</div>
-                                </div>
-
-                                <div class="pull-right">
-                                    <ul class="actions">
-                                        <li class="dropdown">
-                                            <a href="" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="zmdi zmdi-more-vert"></i>
-                                            </a>
-
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li>
-                                                    <a href="">Refresh</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Listview Settings</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="media-body">
-                                    <div class="lgi-heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
-                                    <small class="lgi-text">Quisque non tortor ultricies, posuere elit id, lacinia purus curabitur.</small>
-                                </div>
-                            </div>
-
-                            <div class="list-group-item media">
-                                <div class="checkbox pull-left lgi-checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        <i class="input-helper"></i>
-                                    </label>
+                                <div class="pull-left text-center">
+                                        <div class="pull-left stat">
+                                            <small>Vote</small>
+                                            <h3 class="stat-number">20</h2>
+                                        </div>
+                                        <div class="pull-left stat">
+                                            <small>Jawaban</small>
+                                            <h3 class="stat-number">124</h2>
+                                        </div>
+                                        <div class="pull-left stat">
+                                            <small>Dilihat</small>
+                                            <h3 class="stat-number">245</h2>
+                                        </div>
                                 </div>
 
                                 <div class="pull-right">
@@ -577,147 +559,41 @@
                                     </ul>
                                 </div>
 
-                                <div class="pull-left">
-                                    <div class="avatar-char palette-Red-400 bg">D</div>
-                                </div>
-
-                                <div class="media-body">
-                                    <div class="lgi-heading">Dulla vel metus scelerisque ante sollicitudin commodo purus odio</div>
-                                    <small class="lgi-text">Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</small>
-                                </div>
-                            </div>
-
-                            <div class="list-group-item media">
-                                <div class="checkbox pull-left lgi-checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        <i class="input-helper"></i>
-                                    </label>
-                                </div>
-
-                                <div class="pull-right">
-                                    <ul class="actions">
-                                        <li class="dropdown">
-                                            <a href="" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="zmdi zmdi-more-vert"></i>
-                                            </a>
-
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li>
-                                                    <a href="">Refresh</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Listview Settings</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="pull-left">
+                                <!-- <div class="pull-left">
                                     <div class="avatar-char palette-Green-400 bg">P</div>
-                                </div>
+                                </div> -->
 
                                 <div class="media-body">
-                                    <div class="lgi-heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
-                                    <ul class="lgi-attrs">
-                                        <li>Date Created: 09/06/1988</li>
-                                        <li>Members: 78954</li>
-                                        <li>Published: No</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="list-group-item media">
-                                <div class="checkbox pull-left lgi-checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        <i class="input-helper"></i>
-                                    </label>
-                                </div>
-
-                                <div class="pull-left">
-                                    <div class="avatar-char palette-Purple-300 bg">D</div>
-                                </div>
-
-                                <div class="pull-right">
-                                    <ul class="actions">
-                                        <li class="dropdown">
-                                            <a href="" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="zmdi zmdi-more-vert"></i>
-                                            </a>
-
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li>
-                                                    <a href="">Refresh</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Listview Settings</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="media-body">
-                                    <div class="lgi-heading">Donec congue tempus ligula, varius hendrerit mi hendrerit sit amet. Duis ac quam sit amet leo feugiat iaculis</div>
-                                    <small class="lgi-text">An erant explicari salutatus duo, sumo doming delicata in cum. Eos at augue viderer principes</small>
-
-                                    <ul class="lgi-attrs">
-                                        <li>Date Created: 09/06/1988</li>
-                                        <li>Members: 78954</li>
-                                        <li>Published: No</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="list-group-item media">
-                                <div class="checkbox pull-left lgi-checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        <i class="input-helper"></i>
-                                    </label>
-                                </div>
-
-                                <div class="pull-left">
-                                    <img class="avatar-img" src="img/profile-pics/1.jpg" alt="">
-                                </div>
-
-                                <div class="pull-right">
-                                    <ul class="actions">
-                                        <li class="dropdown">
-                                            <a href="" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="zmdi zmdi-more-vert"></i>
-                                            </a>
-
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li>
-                                                    <a href="">Refresh</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Listview Settings</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="media-body">
-                                    <div class="lgi-heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+                                    <h4 class="lgi-heading thread-title"><a href="thread-detail.html">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</a></h4>
                                     <small class="lgi-text">Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</small>
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <ul class="lgi-attrs">
+                                                <li class="b-0 bgm-gray c-white">kuliah</li>
+                                                <li class="b-0 bgm-gray c-white">proses</li>
+                                                <li class="b-0 bgm-gray c-white">sukses</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <small class="thread-info">dimulai oleh: <a href="profile-about.html">Abdul Syakur</a> pada 2 Jan 2017</small>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
                             <div class="list-group-item media">
-                                <div class="checkbox pull-left lgi-checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        <i class="input-helper"></i>
-                                    </label>
-                                </div>
-
-                                <div class="pull-left">
-                                    <img class="avatar-img" src="img/profile-pics/2.jpg" alt="">
+                                <div class="pull-left text-center">
+                                        <div class="pull-left stat">
+                                            <small>Vote</small>
+                                            <h3 class="stat-number">20</h2>
+                                        </div>
+                                        <div class="pull-left stat">
+                                            <small>Jawaban</small>
+                                            <h3 class="stat-number">124</h2>
+                                        </div>
+                                        <div class="pull-left stat">
+                                            <small>Dilihat</small>
+                                            <h3 class="stat-number">245</h2>
+                                        </div>
                                 </div>
 
                                 <div class="pull-right">
@@ -739,203 +615,25 @@
                                     </ul>
                                 </div>
 
-                                <div class="media-body">
-                                    <div class="lgi-heading">Wel ea elit iuvaret. Mea labitur definitiones ex, id atqui accusata vix, vim nibh mandamus ad</div>
-                                    <small class="lgi-text">Wendy create ipsum dolor sit amet, per cu solet docendi ntoenstion</small>
-
-                                    <ul class="lgi-attrs">
-                                        <li>Date Created: 09/06/1988</li>
-                                        <li>Members: 78954</li>
-                                        <li>Published: No</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="list-group-item media">
-                                <div class="checkbox pull-left lgi-checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        <i class="input-helper"></i>
-                                    </label>
-                                </div>
-
-                                <div class="pull-left">
-                                    <img class="avatar-img" src="img/profile-pics/3.jpg" alt="">
-                                </div>
-
-                                <div class="pull-right">
-                                    <ul class="actions">
-                                        <li class="dropdown">
-                                            <a href="" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="zmdi zmdi-more-vert"></i>
-                                            </a>
-
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li>
-                                                    <a href="">Refresh</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Listview Settings</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <!-- <div class="pull-left">
+                                    <div class="avatar-char palette-Green-400 bg">P</div>
+                                </div> -->
 
                                 <div class="media-body">
-                                    <div class="lgi-heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
-
-                                    <ul class="lgi-attrs">
-                                        <li>Date Created: 11/06/1988</li>
-                                        <li>Members: 212</li>
-                                        <li>Published: Yes</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="list-group-item media">
-                                <div class="checkbox pull-left lgi-checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        <i class="input-helper"></i>
-                                    </label>
-                                </div>
-
-                                <div class="pull-left">
-                                    <img class="avatar-img" src="img/profile-pics/4.jpg" alt="">
-                                </div>
-
-                                <div class="pull-right">
-                                    <ul class="actions">
-                                        <li class="dropdown">
-                                            <a href="" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="zmdi zmdi-more-vert"></i>
-                                            </a>
-
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li>
-                                                    <a href="">Refresh</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Listview Settings</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="media-body">
-                                    <div class="lgi-heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+                                    <h4 class="lgi-heading thread-title"><a href="thread-detail.html">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</a></h4>
                                     <small class="lgi-text">Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</small>
-                                </div>
-                            </div>
-
-                            <div class="list-group-item media">
-                                <div class="checkbox pull-left lgi-checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        <i class="input-helper"></i>
-                                    </label>
-                                </div>
-
-                                <div class="pull-right">
-                                    <ul class="actions">
-                                        <li class="dropdown">
-                                            <a href="" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="zmdi zmdi-more-vert"></i>
-                                            </a>
-
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li>
-                                                    <a href="">Refresh</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Listview Settings</a>
-                                                </li>
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <ul class="lgi-attrs">
+                                                <li class="b-0 bgm-gray c-white">kuliah</li>
+                                                <li class="b-0 bgm-gray c-white">proses</li>
+                                                <li class="b-0 bgm-gray c-white">sukses</li>
                                             </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="media-body">
-                                    <div class="lgi-heading">Dulla vel metus scelerisque ante sollicitudin commodo purus odio</div>
-                                    <small class="lgi-text">Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</small>
-                                </div>
-                            </div>
-
-                            <div class="list-group-item media">
-                                <div class="checkbox pull-left lgi-checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        <i class="input-helper"></i>
-                                    </label>
-                                </div>
-
-                                <div class="pull-right">
-                                    <ul class="actions">
-                                        <li class="dropdown">
-                                            <a href="" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="zmdi zmdi-more-vert"></i>
-                                            </a>
-
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li>
-                                                    <a href="">Refresh</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Listview Settings</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="media-body">
-                                    <div class="lgi-heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
-                                    <ul class="lgi-attrs">
-                                        <li>Date Created: 09/06/1988</li>
-                                        <li>Members: 78954</li>
-                                        <li>Published: No</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="list-group-item media">
-                                <div class="checkbox pull-left lgi-checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        <i class="input-helper"></i>
-                                    </label>
-                                </div>
-
-                                <div class="pull-right">
-                                    <ul class="actions">
-                                        <li class="dropdown">
-                                            <a href="" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="zmdi zmdi-more-vert"></i>
-                                            </a>
-
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li>
-                                                    <a href="">Refresh</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Listview Settings</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="media-body">
-                                    <div class="lgi-heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
-                                    <small class="lgi-text">An erant explicari salutatus duo, sumo doming delicata in cum. Eos at augue viderer principes</small>
-
-                                    <ul class="lgi-attrs">
-                                        <li>Date Created: 09/06/1988</li>
-                                        <li>Members: 78954</li>
-                                        <li>Published: No</li>
-                                    </ul>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <small class="thread-info">dimulai oleh: <a href="profile-about.html">Abdul Syakur</a> pada 2 Jan 2017</small>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

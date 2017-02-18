@@ -449,9 +449,9 @@
 
             <section id="content">
                 <div class="container">
-                    <!-- <div class="c-header">
+                    <div class="c-header">
                         <h2>Forum</h2>
-                    </div> -->
+                    </div>
 
                     <div class="card">
                         
@@ -568,7 +568,10 @@
                         
                             <div class="col-md-12 action-bar">
                                 <div class="html-editor m-b-25"></div>
-                                <button class="btn btn-success pull-right" id="saveAnswerButton">Buat Jawaban</button>
+                                <div class="row m-0">
+                                    <button class="btn btn-default pull-right" id="cancelButton">Batalkan</button>
+                                    <button class="btn btn-success pull-right m-r-10" id="saveAnswerButton">Buat Jawaban</button>
+                                </div>
                             </div>
                         </div>
 
@@ -789,7 +792,7 @@
                     $(this).prop('disabled',true);
                 });
 
-                $('#saveAnswerButton').on('click',function(){
+                $('#saveAnswerButton,#cancelButton').on('click',function(){
                     $('#createAnswer .html-editor').val('');
                     $('#createAnswer').slideUp();
                     $('#createAnswerButton').removeAttr('disabled');

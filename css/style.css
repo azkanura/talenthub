@@ -13,10 +13,17 @@
 	color: #606060;
 }
 
-.thread-info a{
+.thread-info a, .thread-title a{
 	font-weight: bold;
-	color: #888;
+	color: #707070;
 }
+
+.stat-number{
+	font-size: 18px;
+	/*font-weight: bold;*/
+}
+
+
 
 .action-bar{
 	min-height: 70px;
@@ -110,11 +117,56 @@
 .thread-info-container{
 	text-align: left;
 }
+
+.search-title{
+	padding-top:10px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	border-bottom: 1px solid #eee !important;
+	background-color: #fdfdfd;
+}
+.search-title h4{
+	color: #707070;
+}
+
+.alumni-name{
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+.action-button-group{
+	margin-top: 20px;
+}
+
+.action-btn{
+	width: 48%;
+}
+
+/*.action-btn:first-child{
+	margin-right: 1%;
+}*/
+
+.alumni-detail{
+	margin-top: 5px;
+	margin-bottom: 0;
+}
+
+.alumni-education{
+	color: #888;
+	font-weight: bold;
+}
+
+
+.alumni-skill{
+	color: #707070;
+}
+
 @media ( min-width : 768px ){
 	.stat{
 		display: inline-block;
 		margin-right: 20px;
-		width: 50px;
+		min-width: 50px;
+		padding-top:5px; 
 	}
 
 	.form-label{
@@ -131,4 +183,13 @@
 	.thread-info-container{
 		text-align: right;
 	}
+
+	.action-button-group{
+		margin-top: 0;
+	}
+
+	.action-btn{
+		width: auto;
+	}
+
 }
