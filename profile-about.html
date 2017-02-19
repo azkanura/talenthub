@@ -11,6 +11,11 @@
         <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
         <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
         <link href="vendors/bower_components/google-material-color/dist/palette.css" rel="stylesheet">
+        <link href="vendors/bower_components/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet">
+        <link href="vendors/bower_components/nouislider/distribute/jquery.nouislider.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+        <link href="vendors/farbtastic/farbtastic.css" rel="stylesheet">
+        <link href="vendors/bower_components/chosen/chosen.min.css" rel="stylesheet">
         <link href="vendors/summernote/dist/summernote.css" rel="stylesheet">
             
         <!-- CSS -->
@@ -507,7 +512,104 @@
                             </div>
                             <div class="row m-0 edit-mode">
                                 <div class="col-md-12 action-bar">
-                                    <div class="html-editor m-b-25">Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing.</div>
+                                    <div class="row m-0">
+                                        <div class="col-md-6">
+                                            <div class="row form-group">
+                                                <label class="col-sm-4 control-label">Instansi</label>
+                                                <div class="col-sm-8">
+                                                    <div class="fg-line">
+                                                        <input type="text" class="typeahead form-control input-sm" placeholder="Tulis nama instansi atau perusahaan anda">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <label class="col-sm-4 control-label">Jabatan/Posisi</label>
+                                                <div class="col-sm-8">
+                                                    <div class="fg-line">
+                                                        <input type="text" class="typeahead form-control input-sm" placeholder="Posisi anda di perusahaan">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <label class="col-sm-4 control-label">Bidang Karir</label>
+                                                <div class="col-sm-8">
+                                                    <div class="fg-line">
+                                                        <!-- <input type="text" class="form-control input-sm" placeholder="Email"> -->
+                                                        <select class="selectpicker">
+                                                            <option>Akademisi/Peneliti</option>
+                                                            <option>Pegawai Negeri Sipil</option>
+                                                            <option>Pegawai Kementerian</option>
+                                                            <option>BUMN/BUMD</option>
+                                                            <option>Masyarakat/LSM/NGO</option>
+                                                            <option>Swasta</option>
+                                                            <option>Wirausaha</option>
+                                                            <option>TNI/Polri</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <label class="col-sm-4 control-label">Sektor Karir</label>
+                                                <div class="col-sm-8">
+                                                    <div class="fg-line">
+                                                        <select class="selectpicker">
+                                                            <option>Sektor Publik</option>
+                                                            <option>Sektor Swasta</option>
+                                                            <option>Sektor Masyarakat</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <label class="col-sm-4 control-label">Lokasi</label>
+                                                <div class="col-sm-8">
+                                                    <div class="fg-line">
+                                                        <input type="text" class="typeahead form-control input-sm" placeholder="Lokasi anda bekerja">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="row form-group">
+                                                <label class="col-sm-4 control-label">Periode Waktu</label>
+                                                <div class="col-sm-8">
+                                                    <!-- <div class="fg-line">
+                                                        <input type="email" class="form-control input-sm" placeholder="Email">
+                                                    </div> -->
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                                        <div class="dtp-container fg-line">
+                                                            <input type="text" class="form-control date" placeholder="Mulai bekerja">
+                                                        </div>
+                                                        <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
+                                                        <div class="dtp-container fg-line">
+                                                            <input type="text" class="form-control date" placeholder="Selesai Bekerja">
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label class="pull-right">
+                                                            <small style="color:#009688;font-weight: bold;">
+                                                                Saya masih bekerja di sini
+                                                                <input type="checkbox" value="">
+                                                                <i class="input-helper"></i>
+                                                            </small>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <label class="col-sm-4 control-label">Deskripsi</label>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-sm-12">
+                                                    <div class="fg-line">
+                                                        <textarea class="form-control input-sm" placeholder="Tulis deskripsi pekerjaan anda" rows="7"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="row m-0">
                                         <button class="btn btn-default pull-right" id="cancelButton">Batalkan</button>
                                         <button class="btn btn-success pull-right m-r-10" id="saveAnswerButton">Simpan</button>
@@ -892,6 +994,11 @@
         <script src="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
         <script src="vendors/bower_components/typeahead.js/dist/typeahead.bundle.min.js"></script>
         <script src="vendors/summernote/dist/summernote-updated.min.js"></script>
+        <script src="vendors/bower_components/chosen/chosen.jquery.min.js"></script>
+
+        <script src="vendors/fileinput/fileinput.min.js"></script>
+        <script src="vendors/input-mask/input-mask.min.js"></script>
+        <script src="vendors/farbtastic/farbtastic.min.js"></script>
 
         <!-- Placeholder for IE9 -->
         <!--[if IE 9 ]>
@@ -902,16 +1009,23 @@
         <script src="js/actions.js"></script>
         <script src="js/demo.js"></script>
         <script>
-            $('#profileEditBtn').on('click',function(){
-                $(this).hide();
-                $('.item-action-btn').fadeIn();
-                $('#profileCompleteEditBtn').fadeIn();
-            });
-            $('#profileCompleteEditBtn').on('click',function(){
-                $(this).hide();
-                $('.item-action-btn').fadeOut();
-                $('#profileEditBtn').fadeIn();
-            });
+            $(document).ready(function(){
+                $('#profileEditBtn').on('click',function(){
+                    $(this).hide();
+                    $('.item-action-btn').fadeIn();
+                    $('#profileCompleteEditBtn').fadeIn();
+                });
+                $('#profileCompleteEditBtn').on('click',function(){
+                    $(this).hide();
+                    $('.item-action-btn').fadeOut();
+                    $('#profileEditBtn').fadeIn();
+                });
+                $('.date').datetimepicker({
+                    viewMode: 'years',
+                    format: 'MMM/YYYY'
+                });
+            })
+                
         </script>
 
     </body>

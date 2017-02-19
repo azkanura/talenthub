@@ -317,6 +317,20 @@
 	/*display: none;*/
 }
 
+.edit-mode .action-bar{
+	background-color: #fafafa;
+}
+.edit-mode .form-control{
+	background: transparent;
+}
+.edit-mode .bootstrap-select > .btn-default:before{
+	background-color: #fafafa;
+}
+
+.edit-mode label{
+	font-weight: bold;
+}
+
 @media ( min-width : 768px ){
 	.stat{
 		display: inline-block;
