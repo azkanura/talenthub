@@ -11,6 +11,7 @@
         <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
         <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
         <link href="vendors/bower_components/google-material-color/dist/palette.css" rel="stylesheet">
+        <link href="vendors/summernote/dist/summernote.css" rel="stylesheet">
             
         <!-- CSS -->
         <link href="css/app.min.1.css" rel="stylesheet">
@@ -451,14 +452,14 @@
                     <div class="card">
                         <ul class="tab-nav text-center">
                             <li class="active"><a href="#tab2" data-toggle="tab">Profil</a></li>
-                            <li><a href="#tab3" data-toggle="tab">Teman</a></li>
+                            <li><a href="profile-connections.html">Teman</a></li>
                         </ul>
                         <div class="row m-0 p-20 profile-section">
                             <div class="pull-left profile-img-container">
                                 <img src="img/profile-pics/2.jpg" class="profile-img">
                             </div>
                             <div class="pull-left profile-info-container">
-                                <h3 class="profile-info-name" >Randy Wiratama</h3>
+                                <h3 class="profile-info-name" >Randy Wiratama <a class="btn btn-info item-action-btn"><i class="zmdi zmdi-edit"></i></a></h3>
                                 <h4 class="profile-info-job" >Peneliti di Nano Research Technology</h4>
                                 <h5 class="profile-info-location" ><i class="zmdi zmdi-pin"></i> Moskow, Russia</h5>
                                 <small class="profile-info-before-label" >Posisi Sebelumnya</small>
@@ -467,26 +468,57 @@
                                 <h5 class="profile-info-before" >Harvard University, USA</h5>
                             </div>
                             <div style="width:20%" class="pull-left">
-                                <a class="btn btn-success pull-right"><i class="zmdi zmdi-edit"></i> <b class="hidden-xs">Ubah Profil</b></a>
+                                <a class="btn btn-info pull-right" id="profileEditBtn"><i class="zmdi zmdi-edit"></i> <b class="hidden-xs">Ubah Profil</b></a>
+                                <a class="btn btn-success pull-right" id="profileCompleteEditBtn"><i class="zmdi zmdi-check-square"></i> <b class="hidden-xs">Selesai Ubah</b></a>
                             </div>
                         </div>
                         <div class="row m-0 p-15 profile-section">
                             <div class="col-md-12">
-                                <h4 class="section-title"><i class="zmdi zmdi-file-text"></i> Ringkasan</h4 style="margin-bottom: 20px">
+                                <h4 class="section-title" style="margin-bottom: 20px"><i class="zmdi zmdi-file-text"></i> Ringkasan <a class="btn btn-info pull-right item-action-btn"><i class="zmdi zmdi-edit"></i></a></h4>
                                 <p>Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. </p>
                             </div>
                         </div>
+                        <div class="row m-0 edit-mode">
+                            <div class="col-md-12 action-bar">
+                                <div class="html-editor m-b-25">Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing.</div>
+                                <div class="row m-0">
+                                    <button class="btn btn-default pull-right" id="cancelButton">Batalkan</button>
+                                    <button class="btn btn-success pull-right m-r-10" id="saveAnswerButton">Simpan</button>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row m-0 p-15">
                             <div class="col-md-12">
-                                <h4 class="section-title"><i class="zmdi zmdi-case"></i> Pengalaman Kerja</h4 style="margin-bottom: 20px">
+                                <h4 class="section-title"><i class="zmdi zmdi-case"></i> Pengalaman Kerja <a class="btn btn-primary pull-right item-action-btn"><i class="zmdi zmdi-plus"></i> <b class="hidden-xs">Tambah Pengalaman Kerja</b></a></h4 style="margin-bottom: 20px">
                             </div>
                         </div>
                         <div class="row m-0">
                             <div class="row m-0 profile-item-section-container">
                                 <div class="col-md-12 profile-item-section">
                                     <div class="circle"></div>
+                                    <a class="btn btn-info pull-right item-action-btn"><i class="zmdi zmdi-edit"></i></a>
                                     <h5 class="profile-interval"><i class="zmdi zmdi-time-interval"></i> Februari 2015 - Sekarang ( 1 Tahun )  <i class="zmdi zmdi-pin m-l-10"></i> Moskow, Russia</h5>
 
+                                    <h4 class="profile-item" ><strong>Peneliti</strong> di Nano Research Technology</h4>
+                                    <h5 class="profile-item-sector">Bidang Karir : Nano technology | Sektor Karir : Institusi Swasta </h5>
+
+                                    <p class="p-b-20 item-detail">Learn and create mobile and desktop application on Windows platform. Work as trainer and co-trainer for MIC UI Workshop. Learn and create mobile and desktop application on Windows platform. Work as trainer and co-trainer for MIC UI Workshop. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. </p>
+                                </div>
+                            </div>
+                            <div class="row m-0 edit-mode">
+                                <div class="col-md-12 action-bar">
+                                    <div class="html-editor m-b-25">Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing.</div>
+                                    <div class="row m-0">
+                                        <button class="btn btn-default pull-right" id="cancelButton">Batalkan</button>
+                                        <button class="btn btn-success pull-right m-r-10" id="saveAnswerButton">Simpan</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-0 profile-item-section-container">
+                                <div class="col-md-12 profile-item-section">
+                                    <div class="circle"></div>
+                                    <a class="btn btn-info pull-right item-action-btn"><i class="zmdi zmdi-edit"></i></a>
+                                    <h5 class="profile-interval"><i class="zmdi zmdi-time-interval"></i> Februari 2015 - Sekarang ( 1 Tahun )  <i class="zmdi zmdi-pin m-l-10"></i> Moskow, Russia</h5>
                                     <h4 class="profile-item" ><strong>Peneliti</strong> di Nano Research Technology</h4>
                                     <h5 class="profile-item-sector">Bidang Karir : Nano technology | Sektor Karir : Institusi Swasta </h5>
 
@@ -496,16 +528,7 @@
                             <div class="row m-0 profile-item-section-container">
                                 <div class="col-md-12 profile-item-section">
                                     <div class="circle"></div>
-                                    <h5 class="profile-interval"><i class="zmdi zmdi-time-interval"></i> Februari 2015 - Sekarang ( 1 Tahun )  <i class="zmdi zmdi-pin m-l-10"></i> Moskow, Russia</h5>
-                                    <h4 class="profile-item" ><strong>Peneliti</strong> di Nano Research Technology</h4>
-                                    <h5 class="profile-item-sector">Bidang Karir : Nano technology | Sektor Karir : Institusi Swasta </h5>
-
-                                    <p class="p-b-20 item-detail">Learn and create mobile and desktop application on Windows platform. Work as trainer and co-trainer for MIC UI Workshop. Learn and create mobile and desktop application on Windows platform. Work as trainer and co-trainer for MIC UI Workshop. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. </p>
-                                </div>
-                            </div>
-                            <div class="row m-0 profile-item-section-container">
-                                <div class="col-md-12 profile-item-section">
-                                    <div class="circle"></div>
+                                    <a class="btn btn-info pull-right item-action-btn"><i class="zmdi zmdi-edit"></i></a>
                                     <h5 class="profile-interval"><i class="zmdi zmdi-time-interval"></i> Februari 2015 - Sekarang ( 1 Tahun )  <i class="zmdi zmdi-pin m-l-10"></i> Moskow, Russia</h5>
 
                                     <h4 class="profile-item" ><strong>Peneliti</strong> di Nano Research Technology</h4>
@@ -517,13 +540,34 @@
                         </div>
                         <div class="row m-0 p-15">
                             <div class="col-md-12">
-                                <h4 class="section-title"><i class="zmdi zmdi-accounts-alt"></i> Organisasi</h4 style="margin-bottom: 20px">
+                                <h4 class="section-title"><i class="zmdi zmdi-accounts-alt"></i> Organisasi <a class="btn btn-primary pull-right item-action-btn"><i class="zmdi zmdi-plus"></i> <b class="hidden-xs">Tambah Organisasi</b></a></h4 style="margin-bottom: 20px">
                             </div>
                         </div>
                         <div class="row m-0">
                             <div class="row m-0 profile-item-section-container">
                                 <div class="col-md-12 profile-item-section">
                                     <div class="circle"></div>
+                                    <a class="btn btn-info pull-right item-action-btn"><i class="zmdi zmdi-edit"></i></a>
+                                    <h5 class="profile-interval"><i class="zmdi zmdi-time-interval"></i> Februari 2015 - Februari 2016</h5>
+                                    <h4 class="profile-item" >Badan Eksekutif Mahasiswa</h4>
+                                    <h5 class="profile-item-sector">Divisi Media</h5>
+
+                                    <p class="p-b-20 item-detail">Learn and create mobile and desktop application on Windows platform. Work as trainer and co-trainer for MIC UI Workshop. Learn and create mobile and desktop application on Windows platform. </p>
+                                </div>
+                            </div>
+                            <div class="row m-0 edit-mode">
+                                <div class="col-md-12 action-bar">
+                                    <div class="html-editor m-b-25">Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing.</div>
+                                    <div class="row m-0">
+                                        <button class="btn btn-default pull-right" id="cancelButton">Batalkan</button>
+                                        <button class="btn btn-success pull-right m-r-10" id="saveAnswerButton">Simpan</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-0 profile-item-section-container">
+                                <div class="col-md-12 profile-item-section">
+                                    <div class="circle"></div>
+                                    <a class="btn btn-info pull-right item-action-btn"><i class="zmdi zmdi-edit"></i></a>
                                     <h5 class="profile-interval"><i class="zmdi zmdi-time-interval"></i> Februari 2015 - Februari 2016</h5>
                                     <h4 class="profile-item" >Badan Eksekutif Mahasiswa</h4>
                                     <h5 class="profile-item-sector">Divisi Media</h5>
@@ -534,16 +578,7 @@
                             <div class="row m-0 profile-item-section-container">
                                 <div class="col-md-12 profile-item-section">
                                     <div class="circle"></div>
-                                    <h5 class="profile-interval"><i class="zmdi zmdi-time-interval"></i> Februari 2015 - Februari 2016</h5>
-                                    <h4 class="profile-item" >Badan Eksekutif Mahasiswa</h4>
-                                    <h5 class="profile-item-sector">Divisi Media</h5>
-
-                                    <p class="p-b-20 item-detail">Learn and create mobile and desktop application on Windows platform. Work as trainer and co-trainer for MIC UI Workshop. Learn and create mobile and desktop application on Windows platform. </p>
-                                </div>
-                            </div>
-                            <div class="row m-0 profile-item-section-container">
-                                <div class="col-md-12 profile-item-section">
-                                    <div class="circle"></div>
+                                    <a class="btn btn-info pull-right item-action-btn"><i class="zmdi zmdi-edit"></i></a>
                                     <h5 class="profile-interval"><i class="zmdi zmdi-time-interval"></i> Februari 2015 - Februari 2016</h5>
                                     <h4 class="profile-item" >Badan Eksekutif Mahasiswa</h4>
                                     <h5 class="profile-item-sector">Divisi Media</h5>
@@ -561,6 +596,7 @@
                             <div class="row m-0 profile-item-section-container">
                                 <div class="col-md-12 profile-item-section">
                                     <div class="circle"></div>
+                                    <a class="btn btn-info pull-right item-action-btn"><i class="zmdi zmdi-edit"></i></a>
                                     <h5 class="profile-interval"><i class="zmdi zmdi-time-interval"></i> Februari 2015 - Februari 2016</h5>
                                     <h4 class="profile-item" >Universitas Indonesia</h4>
                                     <h5 class="profile-item-sector">Sarjana, Ilmu Komputer, IPK: 3.28</h5>
@@ -568,10 +604,19 @@
                                     <p class="p-b-20 item-detail">Learn and create mobile and desktop application on Windows platform. Work as trainer and co-trainer for MIC UI Workshop. Learn and create mobile and desktop application on Windows platform. </p>
                                 </div>
                             </div>
-
+                            <div class="row m-0 edit-mode">
+                                <div class="col-md-12 action-bar">
+                                    <div class="html-editor m-b-25">Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing.</div>
+                                    <div class="row m-0">
+                                        <button class="btn btn-default pull-right" id="cancelButton">Batalkan</button>
+                                        <button class="btn btn-success pull-right m-r-10" id="saveAnswerButton">Simpan</button>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row m-0 profile-item-section-container">
                                 <div class="col-md-12 profile-item-section">
                                     <div class="circle"></div>
+                                    <a class="btn btn-info pull-right item-action-btn"><i class="zmdi zmdi-edit"></i></a>
                                     <h5 class="profile-interval"><i class="zmdi zmdi-time-interval"></i> Februari 2015 - Februari 2016</h5>
                                     <h4 class="profile-item" >Universitas Indonesia</h4>
                                     <h5 class="profile-item-sector">Sarjana, Ilmu Komputer, IPK: 3.28</h5>
@@ -583,7 +628,7 @@
                         </div>
                         <div class="row m-0 p-15">
                             <div class="col-md-12">
-                                <h4 class="section-title"><i class="zmdi zmdi-code-setting"></i> Keahlian</h4 style="margin-bottom: 20px">
+                                <h4 class="section-title"><i class="zmdi zmdi-code-setting"></i> Keahlian <a class="btn btn-primary pull-right item-action-btn"><i class="zmdi zmdi-plus"></i> <b class="hidden-xs">Tambah Keahlian</b></a></h4 style="margin-bottom: 20px">
                             </div>
                         </div>
                         <div class="row m-0">
@@ -593,6 +638,7 @@
                                         <button type="button" class="btn btn-primary">Javascript</button>
                                         <button type="button" class="btn btn-default">10</button>
                                     </div>
+                                    <a class="btn btn-info item-action-btn"><i class="zmdi zmdi-edit"></i></a>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="pull-right">
@@ -616,6 +662,7 @@
                                         <button type="button" class="btn btn-primary">HTML</button>
                                         <button type="button" class="btn btn-default">8</button>
                                     </div>
+                                    <a class="btn btn-info item-action-btn"><i class="zmdi zmdi-edit"></i></a>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="pull-right">
@@ -636,6 +683,7 @@
                                         <button type="button" class="btn btn-primary">Public Speaking</button>
                                         <button type="button" class="btn btn-default">10</button>
                                     </div>
+                                    <a class="btn btn-info item-action-btn"><i class="zmdi zmdi-edit"></i></a>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="pull-right">
@@ -659,6 +707,7 @@
                                         <button type="button" class="btn btn-primary">Digital Strategy</button>
                                         <button type="button" class="btn btn-default">8</button>
                                     </div>
+                                    <a class="btn btn-info item-action-btn"><i class="zmdi zmdi-edit"></i></a>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="pull-right">
@@ -674,21 +723,41 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row m-0 edit-mode">
+                            <div class="col-md-12 action-bar">
+                                <div class="html-editor m-b-25">Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing.</div>
+                                <div class="row m-0">
+                                    <button class="btn btn-default pull-right" id="cancelButton">Batalkan</button>
+                                    <button class="btn btn-success pull-right m-r-10" id="saveAnswerButton">Simpan</button>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row m-0 p-15">
                             <div class="col-md-12">
-                                <h4 class="section-title"><i class="zmdi zmdi-label-heart"></i> Minat</h4 style="margin-bottom: 20px">
+                                <h4 class="section-title"><i class="zmdi zmdi-label-heart"></i> Minat <a class="btn btn-primary pull-right item-action-btn"><i class="zmdi zmdi-plus"></i> <b class="hidden-xs">Tambah Minat</b></a></h4 style="margin-bottom: 20px">
                             </div>
                         </div>
                         <div class="row m-0">
                             <div class="row m-0 profile-item-section-container">
-                                <div class="col-md-12">
+                                <div class="col-md-12 profile-interest-section">
+                                    <a class="btn btn-info pull-right item-action-btn"><i class="zmdi zmdi-edit"></i></a>
                                     <h4 class="profile-item" >Lingkungan Hidup</h4>
 
                                     <p class="p-b-20 item-detail">Learn and create mobile and desktop application on Windows platform. Work as trainer and co-trainer for MIC UI Workshop. Learn and create mobile and desktop application on Windows platform. </p>
                                 </div>
                             </div>
+                            <div class="row m-0 edit-mode">
+                                <div class="col-md-12 action-bar">
+                                    <div class="html-editor m-b-25">Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing.</div>
+                                    <div class="row m-0">
+                                        <button class="btn btn-default pull-right" id="cancelButton">Batalkan</button>
+                                        <button class="btn btn-success pull-right m-r-10" id="saveAnswerButton">Simpan</button>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row m-0 profile-item-section-container">
-                                <div class="col-md-12">
+                                <div class="col-md-12 profile-interest-section">
+                                    <a class="btn btn-info pull-right item-action-btn"><i class="zmdi zmdi-edit"></i></a>
                                     <h4 class="profile-item" >Politik</h4>
 
                                     <p class="p-b-20 item-detail">Learn and create mobile and desktop application on Windows platform. Work as trainer and co-trainer for MIC UI Workshop. Learn and create mobile and desktop application on Windows platform. </p>
@@ -698,32 +767,45 @@
                         </div>
                         <div class="row m-0 p-15">
                             <div class="col-md-12">
-                                <h4 class="section-title"><i class="zmdi zmdi-globe"></i> Bahasa</h4 style="margin-bottom: 20px">
+                                <h4 class="section-title"><i class="zmdi zmdi-globe"></i> Bahasa <a class="btn btn-primary pull-right item-action-btn"><i class="zmdi zmdi-plus"></i> <b class="hidden-xs">Tambah Bahasa</b></a></h4 style="margin-bottom: 20px">
                             </div>
                         </div>
                         <div class="row m-0">
-                            <div class="row m-0 profile-item-section-container">
+                            <div class="row m-0 profile-item-section-container profile-language-section">
                                 <div class="col-md-6">
+                                    <a class="btn btn-info pull-right item-action-btn"><i class="zmdi zmdi-edit"></i></a>
                                     <h4 class="profile-item" >Bahasa Indonesia</h4>
-
                                     <p class="p-b-20">Penutur asli/ fasih</p>
+
                                 </div>
                                 <div class="col-md-6">
+                                    <a class="btn btn-info pull-right item-action-btn"><i class="zmdi zmdi-edit"></i></a>
                                     <h4 class="profile-item" >Bahasa Inggris</h4>
-
                                     <p class="p-b-20">Mahir</p>
+
                                 </div>
                             </div>
-                            <div class="row m-0 profile-item-section-container">
+                            <div class="row m-0 profile-item-section-container profile-language-section">
                                 <div class="col-md-6">
+                                    <a class="btn btn-info pull-right item-action-btn"><i class="zmdi zmdi-edit"></i></a>
                                     <h4 class="profile-item" >Bahasa Jepang</h4>
-
                                     <p class="p-b-20">Pemula</p>
+
                                 </div>
                                 <div class="col-md-6">
+                                    <a class="btn btn-info pull-right item-action-btn"><i class="zmdi zmdi-edit"></i></a>
                                     <h4 class="profile-item" >Bahasa Arab</h4>
-
                                     <p class="p-b-20">Menengah</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-0 edit-mode">
+                            <div class="col-md-12 action-bar">
+                                <div class="html-editor m-b-25">Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing.</div>
+                                <div class="row m-0">
+                                    <button class="btn btn-default pull-right" id="cancelButton">Batalkan</button>
+                                    <button class="btn btn-success pull-right m-r-10" id="saveAnswerButton">Simpan</button>
                                 </div>
                             </div>
                         </div>
@@ -804,6 +886,13 @@
         <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
         <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
 
+        <script src="vendors/bower_components/moment/min/moment.min.js"></script>
+        <script src="vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+        <script src="vendors/bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
+        <script src="vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="vendors/bower_components/typeahead.js/dist/typeahead.bundle.min.js"></script>
+        <script src="vendors/summernote/dist/summernote-updated.min.js"></script>
+
         <!-- Placeholder for IE9 -->
         <!--[if IE 9 ]>
             <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
@@ -812,5 +901,18 @@
         <script src="js/functions.js"></script>
         <script src="js/actions.js"></script>
         <script src="js/demo.js"></script>
+        <script>
+            $('#profileEditBtn').on('click',function(){
+                $(this).hide();
+                $('.item-action-btn').fadeIn();
+                $('#profileCompleteEditBtn').fadeIn();
+            });
+            $('#profileCompleteEditBtn').on('click',function(){
+                $(this).hide();
+                $('.item-action-btn').fadeOut();
+                $('#profileEditBtn').fadeIn();
+            });
+        </script>
+
     </body>
 </html>
