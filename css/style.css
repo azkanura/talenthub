@@ -250,10 +250,10 @@
 .profile-item-section-container:last-child{
 	border-bottom: 1px solid #eee;
 }
-.profile-item-section-container .section-detail{
+.profile-item-section-container .item-detail{
 	border-bottom: 1px solid #eee;
 }
-.profile-item-section-container:last-child .section-detail{
+.profile-item-section-container:last-child .item-detail{
 	border-bottom: none;
 }
 
