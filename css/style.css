@@ -335,6 +335,14 @@
 	display: none;
 }
 
+.skills{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding:20px;
+	background-color: #eee;
+	border-radius: 5px;
+}
+
 /*.bg-transparent{
 	background-color: transparent;
 }*/

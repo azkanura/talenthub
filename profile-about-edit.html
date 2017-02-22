@@ -1091,10 +1091,10 @@
                         </div>
                         <div class="row m-0 p-15">
                             <div class="col-md-12">
-                                <h4 class="section-title"><i class="zmdi zmdi-code-setting"></i> Keahlian <a class="btn btn-primary pull-right item-action-btn"><i class="zmdi zmdi-plus"></i> <b class="hidden-xs">Tambah Keahlian</b></a></h4 style="margin-bottom: 20px">
+                                <h4 class="section-title"><i class="zmdi zmdi-code-setting"></i> Keahlian <a class="btn btn-primary pull-right item-action-btn" id="createSkillBtn" ><i class="zmdi zmdi-plus"></i> <b class="hidden-xs">Tambah Keahlian</b></a></h4>
                             </div>
                         </div>
-                        <div class="row m-0 display-mode">
+                        <div class="row m-0 display-mode" id="displaySkillMode">
                             <div class="row m-0 profile-item-section-container p-r-30 p-b-25">
                                 <div class="col-md-4">
                                     <div class="btn-group">
@@ -1186,13 +1186,64 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row m-0 edit-mode">
+                        <div class="row m-0 edit-mode" id="createSkillMode">
                             <div class="col-md-12 action-bar">
-                                <div class="html-editor m-b-25">Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing. Highly Enthusiast in graphic design, Web design, Apps Developing, and Writing.</div>
+                                <div class="row m-0">
+                                    <div class="form-group">
+                                        <label class="col-md-3 p-0 form-label">Tambah Keahlian</label>
+                                        <div class="col-md-6 p-r-5">
+                                            <div class="fg-line">
+                                                <input type="text" class="form-control" placeholder="tuliskan keahlian anda">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 p-0">
+                                            <button class="btn btn-primary"><i class="zmdi zmdi-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row m-t-20 m-b-20 m-l-0 m-r-0 skills">
+                                    <!-- <div class="col-md-12"> -->
+                                        <span class="btn-group skill m-r-5 m-b-5">
+                                            <span class="btn palette-Blue-Grey bg">10</span>
+                                            <span class="btn btn-primary">Javascript</span>
+                                            <button type="button" class="btn palette-Grey bg remove-skill"><i class="zmdi zmdi-close"></i></button>
+                                        </span>
+
+                                        <span class="btn-group skill m-r-5 m-b-5">
+                                            <span class="btn palette-Blue-Grey bg">10</span>
+                                            <span class="btn btn-primary">Javascript</span>
+                                            <button type="button" class="btn palette-Grey bg remove-skill"><i class="zmdi zmdi-close"></i></button>
+                                        </span>
+
+                                        <span class="btn-group skill m-r-5 m-b-5">
+                                            <span class="btn palette-Blue-Grey bg">10</span>
+                                            <span class="btn btn-primary">Javascript</span>
+                                            <button type="button" class="btn palette-Grey bg remove-skill"><i class="zmdi zmdi-close"></i></button>
+                                        </span>
+
+                                        <span class="btn-group skill m-r-5 m-b-5">
+                                            <span class="btn palette-Blue-Grey bg">10</span>
+                                            <span class="btn btn-primary">Javascript</span>
+                                            <button type="button" class="btn palette-Grey bg remove-skill"><i class="zmdi zmdi-close"></i></button>
+                                        </span>
+
+                                        <span class="btn-group skill m-r-5 m-b-5">
+                                            <span class="btn palette-Blue-Grey bg">10</span>
+                                            <span class="btn btn-primary">Javascript</span>
+                                            <button type="button" class="btn palette-Grey bg remove-skill"><i class="zmdi zmdi-close"></i></button>
+                                        </span>
+
+                                        <span class="btn-group skill m-r-5 m-b-5">
+                                            <span class="btn palette-Blue-Grey bg">10</span>
+                                            <span class="btn btn-primary">Javascript</span>
+                                            <button type="button" class="btn palette-Grey bg remove-skill"><i class="zmdi zmdi-close"></i></button>
+                                        </span>
+                                    <!-- </div> -->
+                                </div>
                                 <div class="row m-0">
 									<div class="col-md-12">
-									    <button class="btn btn-default pull-right" id="cancelButton">Batalkan</button>
-									    <button class="btn btn-success pull-right m-r-10" id="saveAnswerButton">Simpan</button>
+									    <button class="btn btn-default pull-right" id="cancelCreateSkillBtn">Batalkan</button>
+									    <button class="btn btn-success pull-right m-r-10" id="saveCreateSkillBtn">Simpan</button>
 									</div>
 								</div>
                             </div>
@@ -1556,6 +1607,20 @@
                     // prepend or append the new education
                 });
 
+                $('#createSkillBtn, .edit-skill-btn').on('click',function(){
+                    $('#displaySkillMode').slideUp(function(){
+                        $('#createSkillMode').slideDown();
+                    });
+                });
+
+                $('#saveCreateSkillBtn,#cancelCreateSkillBtn').on('click',function(){
+                    $('#createSkillMode').slideUp(function(){
+                        $('#displaySkillMode').slideDown();
+                    });
+                })
+
+
+
                 //tambah minat
                 $('#createInterestBtn').on('click',function(){
                     $('#createInterestMode').slideDown();
@@ -1579,7 +1644,11 @@
                     // prepend or append the new education
                 });
 
-            })
+
+                //edit mode
+
+                //edit mode
+            });
                 
         </script>
 
