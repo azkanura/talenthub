@@ -29,6 +29,9 @@
             .toggle-switch .ts-label {
                 min-width: 130px;
             }
+            .bootstrap-select{
+                padding:0 !important;
+            }
         </style>
     </head>
 
@@ -460,42 +463,46 @@
             <section id="content">
                 <div class="container">
                     <div class="c-header">
-                        <h2><!-- a class="back"><i class="zmdi zmdi-arrow-left "></i></a>  -->Thread Baru</h2>
+                        <h2>Thread Baru</h2>
                     </div>
 
-                    <div class="card">
-                        <!-- <div class="card-header">
-                            <h2>Buat Thread Baru <small>Super Simple WYSIWYG Editor on Bootstrap</small></h2>
-                        </div> -->
-
+                    <div class="card p-25">
                         <div class="card-body card-padding">
-                            <div class="input-group m-b-25">
-                                <span class="input-group-addon p-r-20 form-label">Judul</span>
-                                <div class="fg-line">
-                                    <input type="text" class="form-control" placeholder="judul thread">
+                            
+                            <div class="row form-group">
+                                <label class="col-sm-2 form-label">Judul</label>
+                                <div class="col-sm-10">
+                                    <div class="fg-line">
+                                        <input type="text" class="form-control" placeholder="tuliskan judul thread">
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="html-editor m-b-25"></div>
-                            <div class="input-group m-b-25">
-                                <span class="input-group-addon p-r-20 form-label">Kategori</span>
-                                <div class="fg-line">
-                                    <select class="selectpicker input-lg">
-                                        <option>Kategori1</option>
-                                        <option>Kategori2</option>
-                                        <option>Kategori3</option>
-                                    </select>
+                            <div class="row form-group">
+                                <label class="col-sm-2 form-label">Kategori</label>
+                                <div class="col-sm-10">
+                                    <div class="fg-line">
+                                        <select class="selectpicker input-lg">
+                                            <option>Kategori1</option>
+                                            <option>Kategori2</option>
+                                            <option>Kategori3</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                                    
-                            <div class="input-group m-b-25">
-                                <span class="input-group-addon p-r-20 form-label">Tag</span>
-                                <div class="fg-line">
-                                    <input type="text" class="form-control" placeholder="minimal 1 tag, pisahkan dengan koma (contoh: html, css)">
+                            
+                            <div class="row form-group">
+                                <label class="col-sm-2 form-label">Tag</label>
+                                <div class="col-sm-10">
+                                    <div class="fg-line">
+                                        <input type="text" class="form-control" placeholder="minimal 1 tag, pisahkan dengan koma (contoh: html, css)">
+                                    </div>
                                 </div>
                             </div>
                             <div class="action-form-bar">
-                                <button class="btn btn-success btn-lg pull-right">Buat Thread</button>
+                                <button class="btn btn-default pull-right">Batalkan</button>
+                                <button class="btn btn-success pull-right m-r-10">Buat Thread</button>
                             </div>
                         </div>
                     </div>
@@ -598,5 +605,11 @@
         <script src="js/functions.js"></script>
         <script src="js/actions.js"></script>
         <script src="js/demo.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.bootstrap-select').addClass('p-0');
+                console.log('hahaha');
+            });
+        </script>
     </body>
 </html>
